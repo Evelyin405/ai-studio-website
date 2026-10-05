@@ -37,6 +37,8 @@ jobs:
 
       - name: Build static site
         run: npm run build
+        env:
+          BASE_URL: /ai-studio-website
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
