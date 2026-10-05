@@ -1,0 +1,6 @@
+{
+  "name": "Atelier Sucre — Artisanal Cake Boutique",
+  "description": "Bespoke celebration cakes, French entremets, interactive custom cake studio, and daily fresh pastries handcrafted with organic Normandy ingredients.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

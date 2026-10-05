@@ -1,0 +1,395 @@
+import { CakeProduct, CustomCakeConfig } from '../types/cake';
+
+export const HERO_IMAGE = '/src/assets/images/hero_artisanal_cake_1791195455378.jpg';
+export const ARTISAN_CHEF_IMAGE = '/src/assets/images/baker_pastry_artisan_1791195502832.jpg';
+
+export const CAKE_PRODUCTS: CakeProduct[] = [
+  {
+    id: 'opera-valrhona',
+    name: "L'Opéra Valrhona & Fleur de Sel",
+    tagline: '70% Guanaja ganache, almond biscuit Joconde, and espresso syrup',
+    category: 'entremets',
+    price: 68,
+    serves: '8–10 slices',
+    leadTimeHours: 24,
+    image: '/src/assets/images/cake_valrhona_chocolate_1791195469011.jpg',
+    description:
+      'A masterwork of French precision. Nine calibrated layers of almond dacquoise soaked in single-origin Ethiopian espresso, layered with silky Valrhona 70% dark chocolate ganache, French coffee buttercream, and finished with a mirror glaze and flakes of hand-harvested Guérande fleur de sel.',
+    layers: [
+      'Valrhona Dark Chocolate Mirror Glaze',
+      'French Espresso Mousseline Buttercream',
+      'Almond Dacquoise Biscuit (Espresso Soaked)',
+      'Single-Origin Guanaja 70% Ganache',
+      'Crisp Praline Feuillantine Base',
+    ],
+    allergens: ['Dairy', 'Eggs', 'Gluten', 'Tree Nuts (Almonds)'],
+    dietaryFlags: ['Vegetarian', 'Alcohol-Free'],
+    rating: 4.9,
+    reviewCount: 142,
+    dimensions: '8" Diameter · 3.5" Height',
+    flavorProfile: 'Bittersweet Cocoa · Roasted Hazelnut · Espresso Velvet',
+  },
+  {
+    id: 'framboise-pistache',
+    name: 'Framboise & Pistache de Sicile',
+    tagline: 'Bronte pistachio dacquoise with tart raspberry coulis and mascarpone',
+    category: 'celebration',
+    price: 74,
+    serves: '10–12 slices',
+    leadTimeHours: 24,
+    image: '/src/assets/images/cake_berry_pistachio_1791195480007.jpg',
+    description:
+      'Celebrated for its striking emerald and crimson crumb. Stone-ground Sicilian Bronte pistachios lend an earthy richness to an airy sponge, paired with house-made wild raspberry coulis and velvety whipped mascarpone cream. Crowned with organic raspberries and edible rose petals.',
+    layers: [
+      'Hand-Selected Organic Raspberries & Edible Rose Petals',
+      'Whipped Normandy Mascarpone Crème',
+      'Wild Mountain Raspberry Confiture',
+      'Sicilian Bronte Pistachio Biscuit',
+      'Crispy Pistachio Praline Crunch',
+    ],
+    allergens: ['Dairy', 'Eggs', 'Gluten', 'Tree Nuts (Pistachios)'],
+    dietaryFlags: ['Vegetarian', 'Naturally Colored'],
+    rating: 5.0,
+    reviewCount: 98,
+    dimensions: '8" Diameter · 4" Height',
+    flavorProfile: 'Bright Tart Berry · Earthy Nutty Pistachio · Creamy Mascarpone',
+  },
+  {
+    id: 'victorian-lambeth',
+    name: 'Victorian Lambeth Heritage',
+    tagline: 'Intricate royal over-piping with Madagascar Bourbon vanilla crumb',
+    category: 'celebration',
+    price: 88,
+    serves: '12–14 slices',
+    leadTimeHours: 48,
+    image: '/src/assets/images/cake_vintage_lambeth_1791195491288.jpg',
+    description:
+      'A revival of the 19th-century royal Lambeth over-piping technique. Multi-layered organic Bourbon vanilla sponge laced with strawberry rhubarb compote, enveloped in slow-whipped Italian meringue buttercream with hand-piped garlands, scallops, and organic maraschino cherries.',
+    layers: [
+      'Handcrafted Victorian Lambeth Scallop & Ruffle Piping',
+      'Strawberry-Rhubarb Botanical Compote',
+      'Bourbon Vanilla Bean Crumb Sponge',
+      'Slow-Chilled Italian Meringue Crème',
+      'Tahitian Vanilla Bean Pastry Core',
+    ],
+    allergens: ['Dairy', 'Eggs', 'Gluten'],
+    dietaryFlags: ['Vegetarian', 'Preservative-Free'],
+    rating: 4.8,
+    reviewCount: 76,
+    dimensions: '8" Diameter · 5.5" Height',
+    flavorProfile: 'Floral Bourbon Vanilla · Bright Strawberry · Silky Buttercream',
+  },
+  {
+    id: 'grand-tiered-botanical',
+    name: 'Atelier Grand Tiered Botanical',
+    tagline: 'Multi-tiered bespoke wedding centerpiece with figs & 24k gold leaf',
+    category: 'wedding',
+    price: 240,
+    serves: '32–40 slices',
+    leadTimeHours: 72,
+    image: '/src/assets/images/hero_artisanal_cake_1791195455378.jpg',
+    description:
+      'Our iconic centerpiece designed for weddings and grand galas. Two tiers of contrasting indulgence: the lower tier is dark Valrhona cocoa with salted caramel praline, while the upper tier features delicate Earl Grey lavender chiffon with blackberry compote. Finished with organic mission figs and 24k gold leaf.',
+    layers: [
+      '24k Pure Edible Gold Leaf & Ripe Mission Figs',
+      'Swiss Meringue Buttercream Feather Coat',
+      'Tier 1: Earl Grey Lavender & Blackberry Confit',
+      'Tier 2: Valrhona Dark Cocoa & Fleur de Sel Caramel',
+      'Structural Reinforced White Chocolate Base Platter',
+    ],
+    allergens: ['Dairy', 'Eggs', 'Gluten', 'Tree Nuts (Almonds)'],
+    dietaryFlags: ['Vegetarian', 'Bespoke Inscription Included'],
+    rating: 5.0,
+    reviewCount: 64,
+    dimensions: '6" + 9" Tiered · 10" Total Height',
+    flavorProfile: 'Lavender Bergamot · Dark Chocolate Truffle · Salted Caramel',
+  },
+  {
+    id: 'yuzu-cloud-meringue',
+    name: 'Nuage de Yuzu & Meringue Flambée',
+    tagline: 'Japanese yuzu curd, toasted Italian meringue, and almond sable',
+    category: 'entremets',
+    price: 62,
+    serves: '8–10 slices',
+    leadTimeHours: 24,
+    image: '/src/assets/images/cake_berry_pistachio_1791195480007.jpg',
+    description:
+      'An invigorating citrus reverie. Sharp, aromatic Japanese yuzu juice folded into silky French curd, nestled over crisp almond pâte sablée and topped with billows of hand-torched vanilla bean Italian meringue.',
+    layers: [
+      'Hand-Torched Italian Meringue Rosettes',
+      'Kochi Prefecture Yuzu & Meyer Lemon Curd',
+      'Airy Chiffon Sponge Soaked in Bergamot Infusion',
+      'French Butter Almond Pâte Sablée Base',
+    ],
+    allergens: ['Dairy', 'Eggs', 'Gluten', 'Tree Nuts (Almonds)'],
+    dietaryFlags: ['Vegetarian', 'Low-Sugar Profile'],
+    rating: 4.9,
+    reviewCount: 53,
+    dimensions: '7.5" Diameter · 3.5" Height',
+    flavorProfile: 'Electric Citrus · Sweet Torched Meringue · Buttery Shortbread',
+  },
+  {
+    id: 'vegan-noisette-praline',
+    name: 'Praliné Noisette Sauvage (Plant-Based)',
+    tagline: 'Piedmont hazelnut praliné, oat milk ganache, and buckwheat biscuit',
+    category: 'dietary',
+    price: 70,
+    serves: '8–10 slices',
+    leadTimeHours: 24,
+    image: '/src/assets/images/cake_valrhona_chocolate_1791195469011.jpg',
+    description:
+      'An uncompromising vegan and gluten-friendly marvel. Crafted with stone-ground roasted Piedmont hazelnuts, single-origin cacao, and organic oat cream atop a toasted buckwheat and almond base.',
+    layers: [
+      'Glazed Dark Cacao & Roasted Hazelnut Nibs',
+      'Whipped Oat Milk & Valrhona Amatika Chocolate Mousse',
+      '100% Pure Piedmont Hazelnut Praliné Crunch',
+      'Gluten-Free Toasted Buckwheat & Almond Sponge',
+    ],
+    allergens: ['Tree Nuts (Hazelnuts, Almonds)', 'Oats (Certified GF)'],
+    dietaryFlags: ['100% Plant-Based (Vegan)', 'Gluten-Friendly', 'Dairy-Free'],
+    rating: 4.8,
+    reviewCount: 47,
+    dimensions: '8" Diameter · 3.5" Height',
+    flavorProfile: 'Toasted Hazelnut · Deep Dark Cacao · Malty Buckwheat',
+  },
+];
+
+export const CUSTOM_TIER_OPTIONS = [
+  {
+    id: 'tier-6',
+    name: 'Petite 6" Celebration',
+    diameter: '6 inches (Single Tier)',
+    servesMin: 6,
+    servesMax: 8,
+    basePrice: 58,
+    description: 'Perfect for intimate birthdays, romantic anniversaries, and small dinner parties.',
+  },
+  {
+    id: 'tier-8',
+    name: 'Classic 8" Grand',
+    diameter: '8 inches (Single Tier)',
+    servesMin: 12,
+    servesMax: 16,
+    basePrice: 82,
+    popular: true,
+    description: 'Our most popular size. Ideal for family gatherings and festive gatherings.',
+  },
+  {
+    id: 'tier-10',
+    name: 'Soirée 10" Banquet',
+    diameter: '10 inches (Single Tier)',
+    servesMin: 20,
+    servesMax: 26,
+    basePrice: 118,
+    description: 'Generous single tier with dramatic visual impact for 20+ guests.',
+  },
+  {
+    id: 'tier-2tier',
+    name: 'Duo-Tier 6" + 8" Stature',
+    diameter: '6" + 8" (Two Tiers Stacked)',
+    servesMin: 24,
+    servesMax: 32,
+    basePrice: 195,
+    description: 'Architectural two-tier centerpiece for engagement parties, baptisms & celebrations.',
+  },
+  {
+    id: 'tier-3tier',
+    name: 'Grand Gala 3-Tier',
+    diameter: '6" + 8" + 10" (Three Tiers)',
+    servesMin: 48,
+    servesMax: 60,
+    basePrice: 360,
+    description: 'Showstopper luxury wedding or gala cake with reinforced central doweling.',
+  },
+];
+
+export const SPONGE_FLAVORS = [
+  {
+    id: 'vanilla-bourbon',
+    name: 'Madagascar Bourbon Vanilla',
+    description: 'Ultra-tender organic sponge infused with fragrant vanilla bean caviar.',
+    colorHex: '#F6E7CE',
+  },
+  {
+    id: 'valrhona-cocoa',
+    name: 'Valrhona 70% Dark Cocoa',
+    description: 'Deep, fudgy chocolate crumb with dutch-processed Dutch cocoa.',
+    colorHex: '#3D251E',
+  },
+  {
+    id: 'matcha-ceremonial',
+    name: 'Kyoto Uji Matcha Chiffon',
+    description: 'Vibrant Japanese green tea sponge with delicate herbaceous notes.',
+    colorHex: '#8DA472',
+  },
+  {
+    id: 'earl-grey-lavender',
+    name: 'Earl Grey & Bergamot',
+    description: 'Black tea infused sponge with Calabrian bergamot oil.',
+    colorHex: '#B8A89A',
+  },
+  {
+    id: 'sicilian-pistachio',
+    name: 'Sicilian Bronte Pistachio',
+    description: 'Made with 100% stone-ground pistachio paste for deep nutty flavor.',
+    colorHex: '#A2B68E',
+  },
+  {
+    id: 'red-velvet',
+    name: 'Traditional Ruby Red Velvet',
+    description: 'Gentle cocoa sponge with subtle buttermilk tang and velvety texture.',
+    colorHex: '#7E2A2F',
+  },
+];
+
+export const FILLING_FLAVORS = [
+  {
+    id: 'raspberry-coulis',
+    name: 'Wild Raspberry Coulis & Chantilly',
+    description: 'Tart mountain raspberry reduction paired with light whipped vanilla cream.',
+    colorHex: '#B23A48',
+    extraPrice: 0,
+  },
+  {
+    id: 'salted-caramel',
+    name: 'Salted Butter Caramel & Praline Crunch',
+    description: 'Guérande fleur de sel amber caramel with caramelized hazelnut feuillantine.',
+    colorHex: '#B87333',
+    extraPrice: 4,
+  },
+  {
+    id: 'passion-mango',
+    name: 'Passionfruit & Alphonso Mango Curd',
+    description: 'Bright tropical citrus curd balancing sweet rich sponge layers.',
+    colorHex: '#EAA228',
+    extraPrice: 4,
+  },
+  {
+    id: 'espresso-mascarpone',
+    name: 'Espresso Ganache & Mascarpone',
+    description: 'Intense roasted coffee infused into silky Italian mascarpone mousse.',
+    colorHex: '#5C4033',
+    extraPrice: 4,
+  },
+  {
+    id: 'hazelnut-gianduja',
+    name: 'Piedmont Hazelnut Gianduja',
+    description: 'Silky whipped milk chocolate hazelnut cream with crushed roasted nuts.',
+    colorHex: '#704214',
+    extraPrice: 6,
+  },
+  {
+    id: 'tahitian-pastry-cream',
+    name: 'Tahitian Vanilla Diplomat Crème',
+    description: 'Rich pastry cream folded with stabilized chantilly cream.',
+    colorHex: '#F7EFDB',
+    extraPrice: 0,
+  },
+];
+
+export const FROSTING_STYLES = [
+  {
+    id: 'smooth-swiss',
+    name: 'Silk Swiss Meringue (Smooth)',
+    description: 'Ultra-smooth, glossy, buttery finish with crisp razor-sharp edges.',
+    type: 'smooth',
+  },
+  {
+    id: 'lambeth-piped',
+    name: 'Victorian Lambeth Over-Piping',
+    description: 'Intricate royal piping with swags, scallops, and delicate borders.',
+    type: 'piped',
+    extraPrice: 16,
+  },
+  {
+    id: 'semi-naked',
+    name: 'Semi-Naked Rustic Scrape',
+    description: 'Delicate whisper of buttercream revealing the natural cake layers beneath.',
+    type: 'naked',
+  },
+  {
+    id: 'textured-stucco',
+    name: 'Artisan Palette Knife Stucco',
+    description: 'Soft organic spatula textures that catch warm dinner party candlelight.',
+    type: 'textured',
+    extraPrice: 8,
+  },
+];
+
+export const EXTERIOR_PALETTES = [
+  { id: 'ivory', name: 'Chantilly Ivory', hex: '#FAF7F0' },
+  { id: 'rose-blush', name: 'Vintage Rose Blush', hex: '#EED9D5' },
+  { id: 'sage-mist', name: 'Provençal Sage Mist', hex: '#D2DDD2' },
+  { id: 'warm-caramel', name: 'Café au Lait Caramel', hex: '#CDB19B' },
+  { id: 'lavender-mist', name: 'Drôme Lavender Haze', hex: '#D8CFDF' },
+  { id: 'midnight-noir', name: 'Valrhona Noir Graphite', hex: '#312E2B' },
+];
+
+export const TOPPING_OPTIONS = [
+  {
+    id: 'fresh-berries',
+    name: 'Handpicked Organic Berries',
+    description: 'Raspberries, blackberries, and wild blueberries with mint sprigs.',
+    price: 12,
+  },
+  {
+    id: 'gold-leaf',
+    name: '24K Edible Pure Gold Leaf Accents',
+    description: 'Hand-applied delicate gold flakes highlighting crests and rims.',
+    price: 16,
+  },
+  {
+    id: 'french-macarons',
+    name: 'French Almond Macarons (Set of 6)',
+    description: 'Vanilla bean, salted caramel, and raspberry macarons nestled on top.',
+    price: 18,
+  },
+  {
+    id: 'edible-florals',
+    name: 'Pressed Organic Edible Petals',
+    description: 'Pansies, cornflowers, and rose petals grown without chemical pesticides.',
+    price: 10,
+  },
+  {
+    id: 'figs-thyme',
+    name: 'Ripe Black Mission Figs & Thyme',
+    description: 'Quartered juicy figs with herbal French thyme sprigs.',
+    price: 14,
+  },
+];
+
+export const CUSTOMER_REVIEWS = [
+  {
+    id: 'rev-1',
+    author: 'Genevieve Laurent',
+    occasion: '30th Birthday Soirée',
+    cake: 'Framboise & Pistache de Sicile',
+    rating: 5,
+    date: 'September 2026',
+    comment:
+      'The Pistachio Raspberry cake was the star of our evening. Every single guest complimented how perfectly balanced the sugar was — not cloying at all, just intense pure pistachio flavor and tart berry confiture. Arrived chilled and pristine.',
+    verified: true,
+  },
+  {
+    id: 'rev-2',
+    author: 'Marcus & Claire Vance',
+    occasion: 'Orangerie Wedding Reception',
+    cake: 'Grand Tiered Botanical Custom',
+    rating: 5,
+    date: 'August 2026',
+    comment:
+      'We designed our two-tier wedding cake through the Custom Studio tool. Atelier Sucre executed the Lambeth piping with unbelievable couture detail. The transition between the Earl Grey upper tier and Valrhona lower tier was sublime.',
+    verified: true,
+  },
+  {
+    id: 'rev-3',
+    author: 'Chef Antoine Mercier',
+    occasion: 'Anniversary Dinner',
+    cake: "L'Opéra Valrhona & Fleur de Sel",
+    rating: 5,
+    date: 'July 2026',
+    comment:
+      'As a restaurateur, I rarely order pastries from elsewhere. The mirror glaze on this Opéra was flawlessly tempered, and the touch of Guérande sea salt elevated the Guanaja chocolate into pure luxury.',
+    verified: true,
+  },
+];
